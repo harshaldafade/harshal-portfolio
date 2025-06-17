@@ -7,7 +7,6 @@ import { Button } from "./ui/button";
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -20,7 +19,6 @@ interface ProjectCardProps {
 export default function ProjectCard({
   title,
   description,
-  image,
   technologies,
   githubUrl,
   liveUrl,
