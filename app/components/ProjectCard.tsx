@@ -30,14 +30,11 @@ export default function ProjectCard({
   features,
 }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       className="relative w-full h-full min-h-[400px] perspective-1000 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div 
         className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d]" 

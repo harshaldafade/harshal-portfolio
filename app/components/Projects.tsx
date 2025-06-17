@@ -191,7 +191,7 @@ const projects: Project[] = [
   {
     title: "GLOW2D Atmospheric Model Integration 🌌",
     description: "Supported the deployment and testing of GLOW2D, a 2D global airglow and atmospheric density simulation model developed at UMass Lowell. Worked closely with postdoctoral researcher Dr. Sunip Mukherjee to adapt the scientific model for modern environments and contribute to research workflows.",
-    image: "/projects/glow2d.jpg", // optional: can use a visual of the Earth’s atmosphere or CLI simulation
+    image: "/projects/glow2d.jpg", // optional: can use a visual of the Earth's atmosphere or CLI simulation
     technologies: ["Fortran", "Python", "macOS", "Scientific Computing", "CLI Automation"],
     organizationUrl: "https://www.uml.edu/research/locsst/", // Optional
     packageUrl: "https://pypi.org/project/glow2d/", 
@@ -255,21 +255,7 @@ const projects: Project[] = [
   }
 ];
 
-const categories = [
-  { id: "all", label: "All Projects" },
-  { id: "ai", label: "AI/ML" },
-  { id: "web", label: "Web Development" },
-  { id: "automation", label: "Automation" },
-  { id: "mobile", label: "Mobile Apps" }
-];
-
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const filteredProjects = selectedCategory === "all"
-    ? projects
-    : projects.filter(project => project.category === selectedCategory);
-
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">

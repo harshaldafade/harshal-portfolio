@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import StatsCounter from "./StatsCounter";
 import Timeline from "./Timeline";
 
@@ -25,13 +25,13 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-gray-300 text-lg">
-              I'm a Computer Science Master's student at UMass Lowell, specializing in AI/ML and full-stack development.
+              I&apos;m a Computer Science Master&apos;s student at UMass Lowell, specializing in AI/ML and full-stack development.
               With a strong foundation in both theoretical concepts and practical applications, I focus on building
               intelligent solutions that solve real-world problems.
             </p>
             <p className="text-gray-300 text-lg">
               My expertise spans from machine learning and deep learning to web development and automation.
-              I'm particularly passionate about leveraging AI to create impactful applications and
+              I&apos;m particularly passionate about leveraging AI to create impactful applications and
               exploring the intersection of technology and user experience.
             </p>
             <div className="flex gap-4">
