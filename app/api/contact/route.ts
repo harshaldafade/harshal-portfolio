@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
       from: "Your Portfolio <onboarding@resend.dev>",
       to: "harshaldafade2001@gmail.com",
       subject: `New message from ${name} (${email})`,
-      reply_to: email,
+      replyTo: email,
       text: message,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br/>${message}</p>`
     });
