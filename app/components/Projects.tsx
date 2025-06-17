@@ -1,7 +1,5 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 interface Project {
@@ -9,11 +7,13 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  githubUrl: string;
-  liveUrl: string;
+  githubUrl?: string;
+  liveUrl?: string;
   demoUrl?: string;
   category: "ai" | "web" | "automation" | "mobile";
   features: string[];
+  organizationUrl?: string;
+  packageUrl?: string;
 }
 
 const projects: Project[] = [
