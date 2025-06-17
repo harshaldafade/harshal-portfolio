@@ -46,7 +46,6 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={{
           background: {
             color: {
@@ -77,7 +76,6 @@ export default function Hero() {
             number: {
               density: {
                 enable: true,
-                area: 800,
               },
               value: 80,
             },
