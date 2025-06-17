@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typed from "typed.js";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import { useInView } from "react-intersection-observer";
 import Particles from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -19,9 +19,13 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
+        "Software Engineer_",
+        "Data Scientist_",
+        "Machine Learning Engineer_",
+        "AI Researcher_",
         "AI Engineer_",
         "Automation Architect_",
-        "Full-Stack Sorcerer_",
+        "Full-Stack Developer_",
       ],
       typeSpeed: 50,
       backSpeed: 30,
@@ -139,27 +143,37 @@ export default function Hero() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 relative overflow-hidden group"
+            asChild
           >
-            <span className="relative z-10">View Resume</span>
-            <motion.div
-              className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"
-              initial={false}
-              whileHover={{ scale: 2 }}
-              transition={{ duration: 0.3 }}
-            />
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="relative z-10">View Resume</span>
+              <motion.div
+                className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"
+                initial={false}
+                whileHover={{ scale: 2 }}
+                transition={{ duration: 0.3 }}
+              />
+            </a>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="relative overflow-hidden group"
+            asChild
           >
-            <span className="relative z-10">See Projects</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-20 transition-opacity"
-              initial={false}
-              whileHover={{ scale: 2 }}
-              transition={{ duration: 0.3 }}
-            />
+            <a href="#projects">
+              <span className="relative z-10">See Projects</span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-20 transition-opacity"
+                initial={false}
+                whileHover={{ scale: 2 }}
+                transition={{ duration: 0.3 }}
+              />
+            </a>
           </Button>
         </motion.div>
 
@@ -170,7 +184,7 @@ export default function Hero() {
           className="flex gap-6 justify-center mt-12"
         >
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/harshaldafade"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
@@ -191,7 +205,7 @@ export default function Hero() {
             </svg>
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/harshal-dafade"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"

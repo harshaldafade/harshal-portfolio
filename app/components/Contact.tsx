@@ -2,27 +2,27 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/harshaldafade",
     icon: "🐙"
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://linkedin.com/in/harshal-dafade",
     icon: "💼"
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/yourusername",
+    url: "https://x.com/harshal_dafade",
     icon: "🐦"
   },
   {
     name: "Email",
-    url: "mailto:your.email@example.com",
+    url: "mailto:harshaldafade2001@gmail.com",
     icon: "✉️"
   }
 ];
@@ -39,12 +39,21 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+    setSubmitStatus("idle");
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
     } catch (error) {
       setSubmitStatus("error");
     } finally {
@@ -174,8 +183,8 @@ export default function Contact() {
             <div className="bg-gray-800 rounded-xl p-6">
               <h4 className="text-xl font-semibold mb-4">Location</h4>
               <p className="text-gray-300">
-                Based in San Francisco, CA<br />
-                Available for remote work worldwide
+                Based in Lowell, MA<br />
+                Available to move anywhere across US.
               </p>
             </div>
           </motion.div>

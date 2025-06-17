@@ -9,9 +9,11 @@ interface ProjectCardProps {
   description: string;
   image: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl: string;
   demoUrl?: string;
+  organizationUrl?: string;
+  packageUrl?: string;
   features: string[];
 }
 
@@ -23,6 +25,8 @@ export default function ProjectCard({
   githubUrl,
   liveUrl,
   demoUrl,
+  organizationUrl,
+  packageUrl,
   features,
 }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -50,22 +54,24 @@ export default function ProjectCard({
             <h3 className="text-xl font-bold mb-2">{title}</h3>
             <p className="text-gray-300 mb-4 line-clamp-3">{description}</p>
             <div className="mt-auto">
-              <div className="flex gap-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1"
-                  asChild
-                >
-                  <a
-                    href={githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
+              <div className="flex flex-wrap gap-2">
+                {githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    asChild
                   >
-                    GitHub
-                  </a>
-                </Button>
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      GitHub
+                    </a>
+                  </Button>
+                )}
                 {liveUrl && (
                   <Button
                     size="sm"
@@ -79,6 +85,40 @@ export default function ProjectCard({
                       onClick={(e) => e.stopPropagation()}
                     >
                       Live Demo
+                    </a>
+                  </Button>
+                )}
+                {organizationUrl && (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a
+                      href={organizationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Organization
+                    </a>
+                  </Button>
+                )}
+                {packageUrl && (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a
+                      href={packageUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Package
                     </a>
                   </Button>
                 )}
@@ -118,22 +158,24 @@ export default function ProjectCard({
                 ))}
               </div>
             </div>
-            <div className="flex gap-4 mt-4">
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex-1"
-                asChild
-              >
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
+            <div className="flex flex-wrap gap-2 mt-4">
+              {githubUrl && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1"
+                  asChild
                 >
-                  GitHub
-                </a>
-              </Button>
+                  <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    GitHub
+                  </a>
+                </Button>
+              )}
               {liveUrl && (
                 <Button
                   size="sm"
@@ -164,6 +206,40 @@ export default function ProjectCard({
                     onClick={(e) => e.stopPropagation()}
                   >
                     Watch Demo
+                  </a>
+                </Button>
+              )}
+              {organizationUrl && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
+                  asChild
+                >
+                  <a
+                    href={organizationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Organization
+                  </a>
+                </Button>
+              )}
+              {packageUrl && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
+                  asChild
+                >
+                  <a
+                    href={packageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Package
                   </a>
                 </Button>
               )}
