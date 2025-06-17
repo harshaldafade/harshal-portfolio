@@ -6,8 +6,6 @@ import Typed from "typed.js";
 import { Button } from "./ui/button";
 import { useInView } from "react-intersection-observer";
 import Particles from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "@tsparticles/engine";
 
 export default function Hero() {
   const el = useRef(null);
@@ -38,14 +36,11 @@ export default function Hero() {
     };
   }, []);
 
-  const particlesInit = async (engine: Engine) => {
-    await loadSlim(engine);
-  };
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
       <Particles
         id="tsparticles"
+        className="absolute inset-0 -z-10"
         options={{
           background: {
             color: {
@@ -91,7 +86,6 @@ export default function Hero() {
           },
           detectRetina: true,
         }}
-        className="absolute inset-0 -z-10"
       />
 
       <motion.div
