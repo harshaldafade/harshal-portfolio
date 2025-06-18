@@ -148,7 +148,7 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Let&apos;s Connect</h3>
               <p className="text-gray-300 mb-8">
                 I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>

@@ -14,6 +14,8 @@ interface Project {
   features: string[];
   organizationUrl?: string;
   packageUrl?: string;
+  proposalUrl?: string;
+  figmaUrl?: string;
 }
 
 const projects: Project[] = [
