@@ -39,6 +39,7 @@ const projects: Project[] = [
     image: "/projects/pothole-detector.jpg",
     technologies: ["Android", "TensorFlow", "LSTM", "Signal Processing", "Google Maps API"],
     githubUrl: "https://github.com/harshaldafade/real-time-pothole-detector",
+    proposalUrl:"/projects/pothole_detection_report.pdf",
     liveUrl: "",
     category: "mobile",
     features: [
@@ -53,7 +54,7 @@ const projects: Project[] = [
   {
     title: "Reinforcement Learning",
     description: "An extensive end-to-end project series that explores core RL principles through progressive homeworks and a midterm and final project, implemented across a diverse range of environments like Blackjack, Cliff Walking, Taxi, Mountain Car, and CartPole using NumPy, OpenAI Gym, and function approximation techniques.",
-    image: "/projects/reinforcement-learning.jpg",
+    image: "/projects/reinforcement-learning.gif",
     technologies: [
       "Python", "NumPy", "OpenAI Gym", "Matplotlib", "Reinforcement Learning", 
       "Function Approximation", "Monte Carlo", "TD Learning", "Policy Gradient"
@@ -189,7 +190,32 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "GLOW2D Atmospheric Model Integration 🌌",
+    title: "SkilBill: UI/UX research",
+    description:
+      "An HCI-focused academic prototype developed at UMass Lowell to modernize skill acquisition and recruitment for software engineers. SkilBill integrates gamification, AI mentoring, and heuristic-driven UX to offer an engaging candidate experience and intelligent recruiter interface. Designed for a dual-user flow, the platform was prototyped using Figma and refined through iterative design loops grounded in qualitative human-centered research, including ethnographic needfinding interviews with students and recruiters.",
+    image: "/projects/skilbill.png",
+    technologies: [
+      "Figma",
+      "AI Matching Algorithms",
+      "Gamification",
+      "Spider Chart",
+      "Recruitment UX",
+      "Heuristic Evaluation"
+    ],
+    githubUrl: "",
+    figmaUrl: "https://www.figma.com/design/KVuteNkhRsBWfJgtRsSpzD/SkilBill?node-id=0-1&p=f",
+    proposalUrl: "/projects/Final_HCI__ACM_format.pdf",
+    category: "web",
+    features: [
+      "Gamified skill-building with XP and progress bars",
+      "Spider chart visualization for recruiter skill match",
+      "AI-generated guidance and upskilling recommendations",
+      "Heuristically-evaluated dual-view UI",
+      "Research-backed design grounded in ethnographic interviews and academic HCI methodology"
+    ]
+  },
+  {
+    title: "GLOW2D Model Integration",
     description: "Supported the deployment and testing of GLOW2D, a 2D global airglow and atmospheric density simulation model developed at UMass Lowell. Worked closely with postdoctoral researcher Dr. Sunip Mukherjee to adapt the scientific model for modern environments and contribute to research workflows.",
     image: "/projects/glow2d.jpg", // optional: can use a visual of the Earth's atmosphere or CLI simulation
     technologies: ["Fortran", "Python", "macOS", "Scientific Computing", "CLI Automation"],
@@ -259,7 +285,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">Some of my works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />

@@ -6,13 +6,16 @@ import Timeline from "./Timeline";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 bg-gray-900">
+    <section
+      id="about"
+      className="relative py-24 px-4 sm:px-8 max-w-4xl mx-auto"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          className="text-3xl sm:text-4xl font-bold text-center mb-16 text-white"
         >
           About Me
         </motion.h2>
@@ -74,9 +77,11 @@ export default function About() {
           >
             <div className="relative w-64 h-64 mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-xl opacity-50 animate-pulse" />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-4xl font-bold">
-                HD
-              </div>
+              <img
+                src="/profile.jpg"
+                alt="Harshal Dafade profile"
+                className="absolute inset-0 w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
+              />
             </div>
           </motion.div>
         </div>
@@ -95,7 +100,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold text-center mb-12">Experience</h3>
+          <h3 className="text-3xl font-bold text-center mb-12 text-white">Experience</h3>
           <Timeline />
         </motion.div>
       </div>

@@ -6,7 +6,7 @@ import { useState } from "react";
 interface Skill {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "ai" | "tools";
+  category: "frontend" | "backend" | "ai" | "tools" | "languages";
   description: string;
   icon: string;
 }
@@ -15,58 +15,114 @@ const skills: Skill[] = [
   {
     name: "Python",
     level: 95,
-    category: "backend",
-    description: "Expert in Python for AI/ML, data analysis, and backend development",
+    category: "languages",
+    description: "Proficient in Python for scripting, automation, backend systems, and building scalable data/AI pipelines. Used extensively in ML, NLP, and scientific computing.",
     icon: "🐍"
   },
   {
-    name: "Machine Learning",
+    name: "JavaScript/TS",
     level: 90,
+    category: "languages",
+    description: "Skilled in modern JS and TS for full-stack development with React, Node.js, and backend APIs. Used across multiple production-grade projects.",
+    icon: "📜"
+  },
+  {
+    name: "Java",
+    level: 80,
+    category: "languages",
+    description: "Experience with Java for building backend services, Android apps, and implementing algorithms and data structures. Used in academic and enterprise projects.",
+    icon: "☕"
+  },
+  {
+    name: "C/C++",
+    level: 75,
+    category: "languages",
+    description: "Experience with C/C++ for performance-critical tasks, algorithmic implementations, and low-level computing. Used in academic and system projects.",
+    icon: "⚙️"
+  },
+  {
+    name: "SQL",
+    level: 85,
+    category: "languages",
+    description: "Strong command of SQL for data analysis, query optimization, and backend integration with PostgreSQL, MySQL, and SQLite.",
+    icon: "🧾"
+  },
+  {
+    name: "Machine Learning",
+    level: 92,
     category: "ai",
-    description: "TensorFlow, PyTorch, Scikit-learn, and advanced ML concepts",
+    description: "Skilled in building end-to-end ML systems with Scikit-learn, XGBoost, LightGBM, and deploying models in production. Familiar with regression, classification, clustering, and time-series.",
     icon: "🧠"
   },
   {
     name: "Deep Learning",
     level: 90,
     category: "ai",
-    description: "CNNs, ViT, Transformers, and modern DL architectures",
+    description: "Expert in CNNs, RNNs, Transformers, and attention-based models using PyTorch and TensorFlow. Worked on projects involving ViT, LSTM, GANs, and multimodal architectures.",
     icon: "🤖"
   },
   {
+    name: "LLMs & NLP",
+    level: 92,
+    category: "ai",
+    description: "Extensive work with Hugging Face Transformers, LangChain, and OpenAI APIs for prompt engineering, semantic search, retrieval-augmented generation (RAG), and text generation.",
+    icon: "💬"
+  },
+  {
     name: "Web Development",
-    level: 85,
+    level: 88,
     category: "frontend",
-    description: "React, Node.js, TypeScript, and modern web technologies",
+    description: "Full-stack experience using React, Next.js, Node.js, TypeScript, Express, Tailwind, and RESTful API integration. Familiar with building performant and secure frontend/backend systems.",
     icon: "🌐"
   },
   {
     name: "Cloud & DevOps",
-    level: 85,
+    level: 87,
     category: "tools",
-    description: "AWS, Docker, Kubernetes, and CI/CD practices",
+    description: "Hands-on experience with AWS (EC2, S3, Lambda, RDS), Docker, GitHub Actions, CI/CD workflows, and containerized deployments. Familiar with Terraform and Kubernetes basics.",
     icon: "☁️"
   },
   {
     name: "Databases",
     level: 85,
     category: "backend",
-    description: "PostgreSQL, MongoDB, SQLite, and database design",
+    description: "Skilled in relational (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) databases. Designed schemas, performed query optimization, and implemented backend-integrated data layers.",
     icon: "🗄️"
   },
   {
     name: "AI/ML Tools",
     level: 90,
     category: "ai",
-    description: "LangChain, Hugging Face, OpenAI, and RAG systems",
-    icon: "🔧"
+    description: "Used OpenAI, Hugging Face, LangChain, Weaviate, FAISS, and ChromaDB for building search and generative AI pipelines. Familiar with Vector DBs and prompt engineering frameworks.",
+    icon: "🛠️"
   },
   {
-    name: "Development Tools",
+    name: "Automation & Scripting",
+    level: 88,
+    category: "tools",
+    description: "Built bots and automation tools using Playwright, Selenium, BeautifulSoup, PyAutoGUI, and Blue Prism. Experience in web scraping, job automation, and RPA systems.",
+    icon: "⚙️"
+  },
+  {
+    name: "Data Engineering",
+    level: 86,
+    category: "backend",
+    description: "Developed ETL pipelines using Pandas, NumPy, SQL, and Apache Airflow. Familiar with building reproducible workflows for structured and unstructured data pipelines.",
+    icon: "📊"
+  },
+  {
+    name: "Visualization & BI",
+    level: 82,
+    category: "tools",
+    description: "Created dashboards and data visualizations using Power BI, Matplotlib, Seaborn, and Plotly. Experience in building insight-driven reports and analytical charts.",
+    icon: "📈"
+  },
+  {
+    name: "Version Control & Collaboration",
     level: 85,
     category: "tools",
-    description: "Git, VS Code, Postman, and development workflows",
-    icon: "🛠️"
+    description: "Git, GitHub, GitLab for version control. Used in collaborative academic, research, and production environments.",
+    icon: "🔃"
   }
 ];
 
@@ -75,7 +131,8 @@ const categories = [
   { id: "frontend", label: "Frontend" },
   { id: "backend", label: "Backend" },
   { id: "ai", label: "AI/ML" },
-  { id: "tools", label: "Tools & DevOps" }
+  { id: "tools", label: "Tools & DevOps" },
+  { id: "languages", label: "Programming Languages" }
 ];
 
 export default function Skills() {
@@ -93,7 +150,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-bold text-center mb-12"
+          className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white"
         >
           Skills & Expertise
         </motion.h2>
@@ -144,9 +201,9 @@ export default function Skills() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-4xl">{skill.icon}</span>
-                  <h3 className="text-xl font-bold">{skill.name}</h3>
+                  <h3 className="text-xl font-bold text-white">{skill.name}</h3>
                 </div>
-                
+
                 <div className="relative h-2 bg-gray-700 rounded-full mb-4">
                   <motion.div
                     className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
@@ -171,4 +228,4 @@ export default function Skills() {
       </div>
     </section>
   );
-} 
+}

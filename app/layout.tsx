@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import MouseTorch from "./components/MouseTorch";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Harshal Dafade | AI Engineer & Full Stack Developer",
-  description: "Portfolio website of Harshal Dafade, an AI Engineer and Full Stack Developer specializing in building intelligent solutions and automation systems.",
+  title: "Harshal Dafade - Portfolio",
+  description: "Full-stack developer and AI/ML enthusiast",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-950 text-white antialiased`}>
+    <html lang="en">
+      <body className={inter.className}>
+        {/* <MouseTorch /> */}
         {children}
       </body>
     </html>

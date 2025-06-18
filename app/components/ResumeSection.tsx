@@ -10,7 +10,7 @@ export default function ResumeSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-bold text-center mb-12"
+          className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white"
         >
           Resume
         </motion.h2>
@@ -19,7 +19,7 @@ export default function ResumeSection() {
           <div className="space-y-8">
             {/* Contact */}
             <div>
-              <h3 className="text-xl font-bold mb-2">Contact</h3>
+              <h3 className="text-xl font-bold mb-2 text-white">Contact</h3>
               <div className="text-gray-300 space-y-1">
                 <div>Harshal Dafade</div>
                 <div><a href="tel:+19785696638" className="hover:underline">+1-978-569-6638</a></div>
@@ -30,7 +30,7 @@ export default function ResumeSection() {
             </div>
             {/* Education */}
             <div>
-              <h3 className="text-xl font-bold mb-2">Education</h3>
+              <h3 className="text-xl font-bold mb-2 text-white">Education</h3>
               <div className="mb-4">
                 <div className="font-semibold">University of Massachusetts</div>
                 <div className="text-gray-400">MS Computer Science | GPA: 3.7</div>
@@ -46,7 +46,7 @@ export default function ResumeSection() {
             </div>
             {/* Technical Skills */}
             <div>
-              <h3 className="text-xl font-bold mb-2">Technical Skills</h3>
+              <h3 className="text-xl font-bold mb-2 text-white">Technical Skills</h3>
               <div className="text-gray-300 text-sm space-y-2">
                 <div><span className="font-semibold">Programming Languages:</span> Python, C++, Java, JavaScript, TypeScript, Solidity, SQL, Bash, C#, Ruby, PHP</div>
                 <div><span className="font-semibold">Machine Learning & AI:</span> TensorFlow, PyTorch, Scikit-learn, NumPy, Keras, Hugging Face Transformers, RAG, Generative AI, LangChain, Pydantic, RL (SARSA, Q-learning, n-step TD), Function Approximation, OpenAI Gym, Sentence-Transformers, OpenCV, CNNs, ViT</div>
@@ -59,7 +59,7 @@ export default function ResumeSection() {
           <div className="space-y-8">
             {/* Experience */}
             <div>
-              <h3 className="text-xl font-bold mb-2">Experience</h3>
+              <h3 className="text-3xl font-bold mb-2 text-white">Experience</h3>
               <div className="mb-4">
                 <div className="font-semibold">UMass Lowell (Office of Graduate and Professional Studies)</div>
                 <div className="text-gray-400">Data Analyst/Engineer | Lowell, MA</div>
@@ -93,7 +93,7 @@ export default function ResumeSection() {
             </div>
             {/* Projects */}
             <div>
-              <h3 className="text-xl font-bold mb-2">Projects</h3>
+              <h3 className="text-3xl font-bold mb-2 text-white">Projects</h3>
               <div className="mb-4">
                 <div className="font-semibold">Trump Of The Day</div>
                 <div className="text-gray-400 text-sm">Open Source Project Owner (<a href="https://github.com/harshaldafade/trump-of-the-day-server" target="_blank" rel="noopener noreferrer" className="underline">repo</a>, <a href="https://trumpoftheday.com" target="_blank" rel="noopener noreferrer" className="underline">trumpoftheday.com</a>)</div>

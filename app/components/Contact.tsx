@@ -73,7 +73,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-bold text-center mb-12"
+          className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white"
         >
           Get in Touch
         </motion.h2>
@@ -86,12 +86,10 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="bg-gray-800 rounded-xl p-8"
           >
-            <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white">Send me a message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
-                </label>
+                <label className="block text-sm font-medium mb-2 text-white" htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -103,9 +101,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
+                <label className="block text-sm font-medium mb-2 text-white" htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -117,9 +113,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
+                <label className="block text-sm font-medium mb-2 text-white" htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -154,14 +148,14 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4">Let&apos;s Connect</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Let's Connect</h3>
               <p className="text-gray-300 mb-8">
                 I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-xl font-semibold">Connect with me</h4>
+              <h4 className="text-xl font-semibold text-white">Connect with me</h4>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((link) => (
                   <motion.a
@@ -169,19 +163,19 @@ export default function Contact() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                    className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span className="text-2xl">{link.icon}</span>
-                    <span>{link.name}</span>
+                    <span className="text-white font-medium">{link.name}</span>
                   </motion.a>
                 ))}
               </div>
             </div>
 
             <div className="bg-gray-800 rounded-xl p-6">
-              <h4 className="text-xl font-semibold mb-4">Location</h4>
+              <h4 className="text-xl font-semibold mb-4 text-white">Location</h4>
               <p className="text-gray-300">
                 Based in Lowell, MA<br />
                 Available to move anywhere across US.

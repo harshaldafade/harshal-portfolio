@@ -46,7 +46,7 @@ export default function StatsCounter() {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
       <Stat value={5} suffix="+" label="Full-Stack Projects" />
       <Stat value={50} suffix="K+" label="Lines of Code" />
-      <Stat value={3} suffix="+" label="Years Experience" />
+      <Stat value={2} suffix="+" label="Years Experience" />
       <Stat value={100} suffix="%" label="Passion for Tech" />
     </div>
   );

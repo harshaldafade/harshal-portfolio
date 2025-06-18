@@ -165,11 +165,9 @@ export default function Timeline() {
                 <div className="text-sm text-purple-400 font-mono mb-1">
                   {item.period}
                 </div>
-                <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                <div className="text-blue-400 font-medium mb-2">
-                  {item.company}
-                </div>
-                <p className="text-gray-300 mb-4">{item.description}</p>
+                <h3 className="text-xl font-bold mb-1 text-white">{item.title}</h3>
+                <div className="font-semibold text-blue-400">{item.company}</div>
+                <div className="text-gray-300 mb-4">{item.description}</div>
 
                 {expandedIndex === index && (
                   <motion.div
@@ -197,7 +195,7 @@ export default function Timeline() {
                           {item.technologies.map((tech, i) => (
                             <span
                               key={i}
-                              className="px-3 py-1 text-xs bg-gray-800 border border-gray-600 rounded-full"
+                              className="px-3 py-1 text-xs bg-gray-800 border border-gray-600 rounded-full text-white"
                             >
                               {tech}
                             </span>
