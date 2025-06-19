@@ -89,9 +89,9 @@ const timelineData: TimelineItem[] = [
       "Graduate coursework and research focused on artificial intelligence, machine learning, full-stack systems, and NLP. GPA: 3.7.",
     achievements: [
       "Completed advanced coursework in: Reinforcement Learning, Machine Learning and Deep Learning Security, Human-Robot Interaction, Human-Computer Interaction, Natural Language Processing, Data Science, Web Systems, Operating Systems, and IoT",
-      "Developed multiple LLM-integrated tools, including a news aggregation platform and OpenAPI automation agent",
-      "Built end-to-end full-stack systems with React, Node.js, Supabase, and Tailwind",
-      "Conducted independent research into adversarial robustness and explainability for deep learning models",
+      "Student Alumni Ambassador at UMass Lowell, representing the master’s community and fostering meaningful connections within the UMass Lowell alumni network. Led alumni networking events, stakeholder meetings, and university fundraisers to strengthen institutional engagement. Managed communications with the university’s largest donors, ensuring continued support and strategic collaboration for the UMass system.",
+      "Executive Board Member of the Economics Society, contributing to academic discussions, organizing events, and fostering student engagement in economic topics.",
+      "Collaborated with a postdoc researcher at Lowell Center for Space Science and Technology to support research on GLOW2D atmospheric modeling",
       "Worked as a Data Analyst/Engineer and Web Maintenance Specialist concurrently with full-time graduate study"
     ],
     technologies: [
@@ -116,20 +116,20 @@ const timelineData: TimelineItem[] = [
       "Undergraduate honors program focused on artificial intelligence, machine learning, and data science. Graduated with Distinction. GPA: 3.6.",
     achievements: [
       "Completed core coursework in: Data Structures and Algorithms, Machine Learning, Deep Learning, Artificial Intelligence, Cloud Computing, Blockchain, Business Intelligence, and Computer Vision",
-      "Built an LSTM-based Android pothole detection system using accelerometer and gyroscope data",
-      "Served as lead developer on academic projects integrating IoT with ML models",
+      "Head organizer and supervisor for hackathons within the Computer Science department",
+      "Led the engine and braking assembly design team as the only Computer Science major in a team of Mechanical Engineers for the college's Formula Team Pegasus.Secured 2nd place overall in FFS FMAE 2019, competing against 63 teams, showcasing exceptional teamwork and skills.",
       "Earned honors distinction in AI/ML specialization across 4-year program"
     ],
     technologies: [
       "Python",
       "C++",
-      "Java",
-      "Android",
-      "LSTM",
-      "Sensor Fusion",
+      "Arduino",
+      "Solidity",
       "AI/ML",
+      "PyTorch",
       "TensorFlow",
-      "Keras"
+      "Keras",
+      "SolidWorks",
     ]
   }
 ];

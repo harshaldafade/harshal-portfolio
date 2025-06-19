@@ -21,18 +21,32 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Trump of the Day",
-    description: "A full-stack news aggregation platform using React and Node.js, automating web scraping from 20+ verified media sources with real-time ingestion, storing over 7,000 articles in Supabase (PostgreSQL). Features include OAuth 2.0, LLM-based summarization, and AWS deployment.",
+    description:
+      "A full-stack, automated news aggregation platform built using React and Node.js. This project features a custom web scraper that programmatically ingests and deduplicates Trump-related news articles daily from 20+ verified sources (via Google News), storing over 7,000 articles in Supabase (PostgreSQL). It integrates LLM-based summarization, OpenAI-powered metadata validation, and keyword tagging. GitHub Actions schedules the scraping workflow. OAuth 2.0 authentication and AWS deployment ensure secure and scalable operations. An in-house ranking algorithm prioritizes content visibility based on relevance and timeliness. While the public demo site is live, some features like summarization and login are still undergoing final testing before full deployment. All backend logic and feature development are documented and available in the GitHub repository.",
     image: "/projects/trump-news.jpg",
-    technologies: ["React", "Node.js", "Supabase", "AWS", "OAuth 2.0"],
+    technologies: [
+      "React",
+      "Node.js",
+      "Supabase",
+      "AWS",
+      "OAuth 2.0",
+      "Web Scraping",
+      "OpenAI API",
+      "LLM Summarization",
+      "GitHub Actions",
+      "PostgreSQL",
+      "Ranking Algorithm"
+    ],
     githubUrl: "https://github.com/harshaldafade/trump-of-the-day-server",
     liveUrl: "https://trumpoftheday.com",
     category: "web",
     features: [
-      "Automated web scraping from 20+ media sources",
-      "Real-time ingestion and deduplication of news articles",
-      "LLM-based summarization and metadata-driven querying",
-      "OAuth 2.0 authentication and user management",
-      "Deployed on AWS for scalability"
+      "Automated web scraping from 20+ trusted media sources with deduplication",
+      "Real-time ingestion pipeline managed via GitHub Actions",
+      "LLM-powered summarization and keyword tagging (locally tested. Needs financial backing, before going live.)",
+      "Custom ranking algorithm for relevance-based article surfacing",
+      "OAuth 2.0 user authentication (live soon, tested locally)",
+      "Migrating to AWS for horizontal scalability and resilience"
     ]
   },
   {
