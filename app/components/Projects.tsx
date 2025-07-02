@@ -125,6 +125,69 @@ const projects: Project[] = [
     ]
   },
   {
+    title: "Scheduling Agent",
+    description:
+      "An AI-powered scheduling assistant that enables users to manage meetings, resolve conflicts, and coordinate with participants using natural language. Built with a FastAPI backend and React frontend, it integrates LangChain with LLMs like OpenAI and Gemini for intelligent scheduling and conflict resolution. Features include OAuth, JWT authentication, and modular extensibility.",
+    image: "/projects/scheduling-agent.jpg", // Replace with your actual image path
+    technologies: [
+      "FastAPI",
+      "Python",
+      "React",
+      "TypeScript",
+      "LangChain",
+      "OpenAI",
+      "Gemini",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "OAuth",
+      "JWT"
+    ],
+    githubUrl: "https://github.com/harshaldafade/Scheduling-Agent",
+    liveUrl: "", // Optional: add a demo link or deployment URL here
+    category: "ai",
+    features: [
+      "Natural language meeting scheduling via text or voice interface",
+      "FastAPI backend integrated with LangChain for AI logic handling",
+      "React + TypeScript frontend with Tailwind CSS and real-time UI",
+      "AI-powered conflict detection and intelligent time suggestions",
+      "Secure JWT auth system with Google/GitHub OAuth support",
+      "Extensible to support multiple LLMs including OpenAI, Gemini, Claude",
+      "Real-time calendar, dashboard, and meeting management features",
+      "CI/CD via GitHub Actions and optional Docker support for deployment"
+    ]
+  },
+
+  {
+    title: "Adversarial Defense: PGD Attack Mitigation",
+    description: "Investigated adversarial robustness of CNNs on Fashion MNIST using Projected Gradient Descent (PGD) attacks. Implemented and benchmarked three defenses: adversarial training, label smoothing, and gradient masking. The project includes visualizations comparing defense performance under varying ε values, supported by rigorous experimentation and Jupyter-based analysis.",
+    image: "/projects/adversarial-defense.jpg", // Replace with your project image
+    technologies: [
+      "TensorFlow",
+      "Python",
+      "CNN",
+      "PGD Attack",
+      "Adversarial Training",
+      "Label Smoothing",
+      "Gradient Masking",
+      "Matplotlib",
+      "Fashion MNIST",
+      "Jupyter Notebook"
+    ],
+    githubUrl: "https://github.com/harshaldafade/adversarial-defense-pgd-fashion-mnist",
+    liveUrl: "https://colab.research.google.com/drive/1xDk_YYcC41JHwfWfYBi5f-XxdlzaWIN1?usp=sharing",
+    category: "ai",
+    features: [
+      "3-layer CNN trained on Fashion MNIST achieving strong baseline accuracy",
+      "Implemented PGD adversarial attack pipeline with configurable ε, α, and steps",
+      "Adversarial Training: retraining with adversarial examples to enhance robustness",
+      "Label Smoothing: regularizes predictions for better generalization",
+      "Gradient Masking: limits gradient flow to resist adversarial perturbations",
+      "Visualized accuracy vs ε, adversarial success rate vs ε, and defense comparisons",
+      "Analyzed the trade-offs and effectiveness of each defense method under attack"
+    ]
+  },
+
+  {
     title: "LinkedIn Bot 🤖",
     description: "An intelligent automation tool built with Playwright and Python that streamlines LinkedIn's job application process. The bot handles multi-step Easy Apply forms, prevents duplicate submissions, and maintains a detailed application log with robust error handling.",
     image: "/projects/linkedin-bot.jpg",
